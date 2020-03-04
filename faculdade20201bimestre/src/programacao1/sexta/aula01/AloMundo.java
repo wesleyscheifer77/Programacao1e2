@@ -5,7 +5,7 @@ import java.util.Date;
 public class AloMundo {
 	//atributos
 	int idade; 
-	
+	 
 	public static void main(String[] args) {
 		int numeroSorte;
 		System.out.println("AloMundo P1");

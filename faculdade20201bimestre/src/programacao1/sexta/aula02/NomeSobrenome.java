@@ -2,7 +2,7 @@ package programacao1.sexta.aula02;
 
 import java.util.Scanner;
 
-public class NOmeSobrenome {
+public class NomeSobrenome {
 	public static void main(String[] args) {
 		String nome;
 		String sobreNome;
