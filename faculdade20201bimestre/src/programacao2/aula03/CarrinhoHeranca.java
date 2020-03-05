@@ -5,12 +5,9 @@ public class CarrinhoHeranca {
 	// para cada item que seja necessário comercializar. sem herança para cada
 	// novo imte um novo conjunto de métodos e atributos precisam ser criados.
 	// Comparar com a classe Carrinho a diferença.
-
 	final static int TAM = 100;
-
 	Vestuario vestuarioVetor[] = new Vestuario[TAM];
 	int contadorVestuario = 0;
-
 	// Passamos a receber a superclasse como parãrametro.
 	// A classe VestuarioConstrutor representa todos os itens que vendemos.
 	public void adicionarVestuario(Vestuario vestGenerico) {

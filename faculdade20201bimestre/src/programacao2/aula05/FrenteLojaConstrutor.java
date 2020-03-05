@@ -80,7 +80,7 @@ public class FrenteLojaConstrutor {
 				String tpGola = this.leia.next();
 				// Com o uso dos construtores deixamos de precisar utilizar atribuicao a cada um
 				// dos atributos. Observe a quantidade de linhas que reduzimos.
-				
+
 				CamisaConstrutor cam = new CamisaConstrutor(this.cor, this.tamanho, this.preco, this.marcaaaa,
 						this.modelo, tpGola);
 
@@ -92,20 +92,17 @@ public class FrenteLojaConstrutor {
 				lerDadosSuper();
 				// Com o uso dos construtores deixamos de precisar utilizar atribuicao a cada um
 				// dos atributos
-				Cinto cinto = new Cinto();
 				System.out.println("Feito em couro (S/N):");
 				String eCouro = this.leia.next();
+				boolean isCouro = false;
 				if (eCouro.equalsIgnoreCase("s")) {
-					cinto.eCouro = true;
+					isCouro = true;
 				}
 				System.out.println("Digite quantidade de furos:");
 				int qdadeFuros = this.leia.nextInt();
-				cinto.qdadeFuros = qdadeFuros;
-				cinto.cor = this.cor;
-				cinto.modelo = this.modelo;
-				cinto.preco = this.preco;
-				cinto.tamanho = this.tamanho;
-				cinto.marca = this.marcaaaa;
+
+				Cinto cinto = new Cinto(this.cor, this.tamanho, this.preco, this.marcaaaa, this.modelo, isCouro,
+						qdadeFuros);
 				carHeranca.adicionarVestuario(cinto);
 
 				break;
@@ -165,6 +162,5 @@ public class FrenteLojaConstrutor {
 		Date dt = new Date(cal.getTimeInMillis());
 		return dt;
 	}
-
 
 }

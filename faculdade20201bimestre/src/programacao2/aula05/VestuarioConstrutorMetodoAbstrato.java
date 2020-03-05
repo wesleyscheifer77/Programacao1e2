@@ -13,6 +13,17 @@ public abstract class VestuarioConstrutorMetodoAbstrato {
 	
 
 	public VestuarioConstrutorMetodoAbstrato(String cor, String tamanho, double preco, String marca, String modelo,
+			boolean aplicaDesconto) {
+		super();
+		this.cor = cor;
+		this.tamanho = tamanho;
+		this.preco = preco;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.aplicaDesconto = aplicaDesconto;
+	}
+
+	public VestuarioConstrutorMetodoAbstrato(String cor, String tamanho, double preco, String marca, String modelo,
 			boolean aplicaDesconto, double percentualDesconto) {
 		super();
 		this.cor = cor;
