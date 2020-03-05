@@ -10,4 +10,5 @@ public class Cinto extends VestuarioConstrutor {
 				" Cinto [eCouro=" + eCouro + ", qdadeFuros=" + qdadeFuros + "]";
 	}
 
+ 
 }

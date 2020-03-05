@@ -1,11 +1,13 @@
-package programacao2.aula04;
+package programacao2.aula05;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
-public class FrenteLojaHeranca {
+import programacao2.aula03.FrenteLojaHeranca;
+
+public class FrenteLojaConstrutor {
 	Scanner leia = new Scanner(System.in).useDelimiter("\r\n");
 	private String cor;
 	private String tamanho;
@@ -29,11 +31,12 @@ public class FrenteLojaHeranca {
 	}
 
 	public static void main(String[] args) {
-		new FrenteLojaHeranca().processar();
+		new FrenteLojaConstrutor().processar();
 	}
 
 	private void processar() {
 		CarrinhoHeranca carHeranca = new CarrinhoHeranca();
+
 		int op = 0;
 		// Aqui precisa aparecer um loop para que eja possível interagir com os
 		// itens
@@ -75,21 +78,20 @@ public class FrenteLojaHeranca {
 
 				System.out.println("Digite o tipo da gola:");
 				String tpGola = this.leia.next();
-
+				// Com o uso dos construtores deixamos de precisar utilizar atribuicao a cada um
+				// dos atributos. Observe a quantidade de linhas que reduzimos.
+				
 				CamisaConstrutor cam = new CamisaConstrutor(this.cor, this.tamanho, this.preco, this.marcaaaa,
 						this.modelo, tpGola);
-				// cam.tpGola = tpGola;
-				// cam.cor = this.cor;
-				// cam.modelo = this.modelo;
-				// cam.preco = this.preco;
-				// cam.tamanho = this.tamanho;
-				// cam.marca = this.marcaaaa;
+
 				carHeranca.adicionarVestuario(cam);
 				break;
 
 			case 3:
 				// cinto
 				lerDadosSuper();
+				// Com o uso dos construtores deixamos de precisar utilizar atribuicao a cada um
+				// dos atributos
 				Cinto cinto = new Cinto();
 				System.out.println("Feito em couro (S/N):");
 				String eCouro = this.leia.next();
@@ -110,6 +112,8 @@ public class FrenteLojaHeranca {
 			case 4:
 				lerDadosSuper();
 				Sapato sapato = new Sapato();
+				// Com o uso dos construtores deixamos de precisar utilizar atribuicao a cada um
+				// dos atributos
 				sapato.dtFabricação = leData("Digitar data de fabricação (AAAA/MM/DD):");
 				sapato.cor = this.cor;
 				sapato.modelo = this.modelo;
@@ -135,9 +139,9 @@ public class FrenteLojaHeranca {
 
 	private Date leData(String msg) {
 		/*
-		 * estes passos podem ser utilizados para a leitura de uma data no
-		 * formato string e ser convertida para um objeto Date. Este objeto do
-		 * tipo Date pode ser usado em uma pesquisa de banco de dados.
+		 * estes passos podem ser utilizados para a leitura de uma data no formato
+		 * string e ser convertida para um objeto Date. Este objeto do tipo Date pode
+		 * ser usado em uma pesquisa de banco de dados.
 		 */
 		String data;
 		do {
@@ -152,8 +156,8 @@ public class FrenteLojaHeranca {
 		// quebra a data lida em um vetor, usando o / como separador
 		String[] datVet = data.split("/");
 		/*
-		 * converte a string lida em uma data do tipo Calendar. É necessário
-		 * subtrair um do mês, devido ao java iniciar o controle dos meses em 0.
+		 * converte a string lida em uma data do tipo Calendar. É necessário subtrair um
+		 * do mês, devido ao java iniciar o controle dos meses em 0.
 		 */
 		Calendar cal = new GregorianCalendar(Integer.parseInt(datVet[0]), Integer.parseInt(datVet[1]) - 1,
 				Integer.parseInt(datVet[2]));
@@ -161,5 +165,6 @@ public class FrenteLojaHeranca {
 		Date dt = new Date(cal.getTimeInMillis());
 		return dt;
 	}
+
 
 }

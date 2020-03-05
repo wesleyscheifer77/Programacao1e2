@@ -7,5 +7,5 @@ public class UnderWear extends VestuarioConstrutor {
 	public String toString() {
 		return super.toString() + " UnderWear [tpTecido=" + this.tpTecido + "]";
 	}
-
+ 
 }

@@ -11,5 +11,5 @@ public class Sapato extends VestuarioConstrutor {
 		DateFormat dataFormatada = DateFormat.getDateInstance(DateFormat.DEFAULT);
 		return super.toString() + " Sapato [dtFabricação=" + dataFormatada.format(this.dtFabricação) + "]";
 	}
-
+ 
 }

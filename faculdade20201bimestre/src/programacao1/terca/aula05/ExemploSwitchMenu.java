@@ -11,6 +11,7 @@ public class ExemploSwitchMenu {
 
 	private void processar() {
 		int op = 0;
+		// Gera débito técnico.
 //		while (true) {
 		while (op != 9) {
 			System.out.println("1 - Cadastrar.");
@@ -37,6 +38,7 @@ public class ExemploSwitchMenu {
 				System.out.println("Escolheu Atualizar");
 				break;
 			case 9:
+//				System.exit(0);// para o caso do while (true) que gerou Débito Técnico.
 				break;
 			default:
 				System.out.println("Opção inválida.");

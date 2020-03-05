@@ -1,6 +1,6 @@
-package programacao2.aula04;
+package programacao2.aula05;
 
-public class CamisaConstrutor extends VestuarioConstrutor {
+public class CamisaConstrutor extends VestuarioConstrutorMetodoAbstrato {
 
 	String tpGola;
 
@@ -14,6 +14,11 @@ public class CamisaConstrutor extends VestuarioConstrutor {
 		super(cor, tamanho, preco, marca, modelo);
 		this.tpGola = tpGola;
 	}
- 
+
+	@Override
+	protected void aplicarDesconto() {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

@@ -7,5 +7,5 @@ public class Meia extends VestuarioConstrutor {
 	public String toString() {
 		return super.toString() + " Meia [tpCano=" + this.tpCano + "]";
 	}
-
+ 
 }

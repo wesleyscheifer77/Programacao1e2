@@ -6,11 +6,13 @@ public abstract class VestuarioConstrutor {
 	protected double preco;
 	protected String marca;
 	protected String modelo;
+
 	@Override
 	public String toString() {
-		return "VestuarioConstrutor [cor=" + this.cor + ", tamanho=" + this.tamanho + ", preco=" + this.preco + ", marca=" + this.marca + ", modelo="
-				+ this.modelo + "]";
+		return "VestuarioConstrutor [cor=" + this.cor + ", tamanho=" + this.tamanho + ", preco=" + this.preco
+				+ ", marca=" + this.marca + ", modelo=" + this.modelo + "]";
 	}
+
 	public VestuarioConstrutor(String cor, String tamanho, double preco, String marca, String modelo) {
 		super();
 		this.cor = cor;
@@ -19,12 +21,11 @@ public abstract class VestuarioConstrutor {
 		this.marca = marca;
 		this.modelo = modelo;
 	}
+
 	public VestuarioConstrutor() {
 		super();
 	}
 
 	 
-
-	
 
 }

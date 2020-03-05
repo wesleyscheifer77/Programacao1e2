@@ -4,10 +4,11 @@ public class Carrinho {
 	// Atributos
 	final static int TAM = 100;
 
-	// Aqui ja observamos variaveis redundantes
+	// Aqui ja observamos variaveis redundantes.
+	//Para cada novo item adicionaremos 15 linhas de código.
+	// Para resolver este modelo de programação é que existe herança.
 	Cinto cintoVetor[] = new Cinto[TAM];
 	int contadorCinto = 0;
-
 	public void adicionarCinto(Cinto cinto) {
 		// Aqui precisa controlar se a quantidade m´xima de camisas foi
 		// alcançada. Devido ao uso de vetores
@@ -15,7 +16,6 @@ public class Carrinho {
 		this.cintoVetor[this.contadorCinto] = cinto;
 		this.contadorCinto++;
 	}
-
 	public double calcularValorCinto() {
 		double total = 0.0;
 		for (int i = 0; i < this.contadorCinto; i++) {
