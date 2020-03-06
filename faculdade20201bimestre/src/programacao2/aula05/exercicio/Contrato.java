@@ -1,26 +1,22 @@
 package programacao2.aula05.exercicio;
 
-import programacao2.aula05.VestuarioConstrutorMetodoAbstrato;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Contrato {
-	// Vetor
+	List<Locomocao> listalocomocao = new ArrayList<>();
 
-	Locomocao LocomocaoVetor[] = new Locomocao[TAM];
-
-	// Contador de Vetor
-	int contadorLocomocao = 0;
-
-	final static int TAM = 4;
 	// Metodo para adicionar
-
 	public void adicionarLocomoca(Locomocao loca) {
-
+		this.listalocomocao.add(loca);
 	}
 
 	public double calcularItensAlugados() {
-
-		return 0.0;
-
+		double total = 0.0;
+		for (Locomocao locomocao : this.listalocomocao) {
+			total += locomocao.getPrecoDiaria();
+		}
+		return total;
 	}
 
 }
