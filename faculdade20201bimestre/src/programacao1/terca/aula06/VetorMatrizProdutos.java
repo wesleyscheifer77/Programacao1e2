@@ -7,7 +7,8 @@ public class VetorMatrizProdutos {
 		final int TAMMAT = 2;
 		final int TAMVET = 6;
 		int prateleira[][] = new int[TAMMAT][TAMMAT];
-		String produtos[] = { "vazio", "xampu", "condicionador", "hidratante", "tintura", "demaquilante", };
+		String produtos[] = { "vazio", "xampu", "condicionador",
+				"hidratante", "tintura", "demaquilante", };
 		System.out.println("0 " + produtos[0]);
 		System.out.println("1 " + produtos[1]);
 		System.out.println("2 " + produtos[2]);
