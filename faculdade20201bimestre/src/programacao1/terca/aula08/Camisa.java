@@ -8,6 +8,6 @@ public class Camisa {
 	@Override
 	public String toString() {
 		return "Camisa [marca=" + this.marca + ", preco=" + this.preco + ", cor=" + this.cor + "]";
-	}
+	}   
 
 }
