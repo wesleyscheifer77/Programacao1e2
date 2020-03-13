@@ -1,4 +1,4 @@
-package programacao1.sexta.aula06;
+package programacao1.sexta.aula05;
 
 import java.util.Scanner;
 
