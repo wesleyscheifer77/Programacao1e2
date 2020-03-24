@@ -16,7 +16,8 @@ public class Caixa {
 		int op = 0;
 		do {
 			System.out.println("1 - Adicionar camisa");
-			System.out.println("2 - Fechar Pedido");
+			System.out.println("2 - Adicionar calca");
+			System.out.println("7 - Fechar Pedido");
 			System.out.println("9 - Encerrar sistema");
 			System.out.println("Digite sua opção:");
 			op = this.leia.nextInt();
@@ -34,10 +35,30 @@ public class Caixa {
 				car.adicionarCamisa(cam);
 
 				break;
-
 			case 2:
+				Calca cal = new Calca();
+				System.out.println("Adcionando CAlca");
+				System.out.println("Digite a marca da calca:");
+				cal.setMarca(this.leia.next());
+				System.out.println("Digite a modelo da calca:");
+				cal.setModelo(this.leia.next());
+				System.out.println("Digite o preço da calca:");
+				cal.setPreco(this.leia.nextDouble());
+
+				System.out.println("Possui passa cinto:");
+				String isCinto = this.leia.next();
+				if (isCinto.equalsIgnoreCase("s")) {
+					cal.setTemCinto(true);
+				}
+
+				car.adicionarCalca(cal);
+
+				break;
+
+			case 7:
 				System.out.println("Fechar o pedido");
 				double valorPagar = car.fecharCamisa();
+				valorPagar += car.fecharCalca();
 				System.out.println("Total do pedido:" + valorPagar);
 				break;
 

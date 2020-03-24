@@ -36,6 +36,13 @@ public class Camisa {
 		this.modelo = modelo;
 	}
 
+	@Override
+	public String toString() {
+		return "Camisa [marca=" + marca + ", preco=" + preco + ", modelo=" + modelo + "]";
+	}
+
 	// Segundo ela pode conter métodos
 
+	
+	
 }
