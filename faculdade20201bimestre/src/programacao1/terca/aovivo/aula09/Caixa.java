@@ -1,0 +1,52 @@
+package programacao1.terca.aovivo.aula09;
+
+import java.util.Scanner;
+
+public class Caixa {
+	Scanner leia = new Scanner(System.in).useDelimiter("\r\n");
+
+	public static void main(String[] args) {
+		new Caixa().processar();
+	}
+
+	private void processar() {
+
+		Carrinho car = new Carrinho();
+
+		int op = 0;
+		do {
+			System.out.println("1 - Adicionar camisa");
+			System.out.println("2 - Fechar Pedido");
+			System.out.println("9 - Encerrar sistema");
+			System.out.println("Digite sua opção:");
+			op = this.leia.nextInt();
+			switch (op) {
+			case 1:
+				Camisa cam = new Camisa();
+				System.out.println("Adcionando Camisa");
+				System.out.println("Digite a marca da camisa:");
+				cam.setMarca(this.leia.next());
+				System.out.println("Digite a modelo da camisa:");
+				cam.setModelo(this.leia.next());
+				System.out.println("Digite o preço da camisa:");
+				cam.setPreco(this.leia.nextDouble());
+
+				car.adicionarCamisa(cam);
+
+				break;
+
+			case 2:
+				System.out.println("Fechar o pedido");
+				double valorPagar = car.fecharCamisa();
+				System.out.println("Total do pedido:" + valorPagar);
+				break;
+
+			case 9:
+				System.out.println("Encerrando o istema Caixa");
+			default:
+				break;
+			}
+		} while (op != 9);
+	}
+
+}
