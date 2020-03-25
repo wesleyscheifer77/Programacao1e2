@@ -23,6 +23,7 @@ public class Carrinho {
 	}
 
 	
+	// para cada produto prcisamos duplicar 15 linhas de código.
 	Calca vetorCalca[] = new Calca[50];
 	int controleQdadeCalca = 0;
 
