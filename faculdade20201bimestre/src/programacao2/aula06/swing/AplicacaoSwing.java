@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JToggleButton;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -30,6 +31,7 @@ public class AplicacaoSwing implements ActionListener {
 
 	public Component createComponents() {
 		JButton button = new JButton("Eu sou um botao Swing!");
+		JToggleButton buttonT = new JToggleButton("Eu sou um botao Swing!");
 		button.setMnemonic(KeyEvent.VK_I);
 		button.addActionListener(this);
 		this.label.setLabelFor(button);
@@ -39,6 +41,7 @@ public class AplicacaoSwing implements ActionListener {
 		 * contem e para colocar JPanel contido tem uma borda vazia (empty).
 		 */
 		JPanel pane = new JPanel(new GridLayout(0, 1));
+		pane.add(buttonT);
 		pane.add(button);
 		pane.add(this.label);
 		pane.setBorder(BorderFactory.createEmptyBorder(30, // top

@@ -1,6 +1,6 @@
 package programacao1.terca.aovivo.aula09;
 
-public class Vestuario {
+public abstract class Vestuario {
 	private String modelo;
 	private String marca;
 	private double preco;
