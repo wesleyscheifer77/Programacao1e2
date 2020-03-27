@@ -1,4 +1,4 @@
-package programacao1.terca.aovivo.aula09;
+package programacao1.terca.aula09.aovivo;
 
 public class Cliente {
 	private String nome;
