@@ -26,7 +26,7 @@ public class CaixaInteligente {
 
 	private void processar() {
 		int op = 0;
-		Carrinho car = new Carrinho();
+		CarrinhoInteligente car = new CarrinhoInteligente();
 		do {
 			System.out.println("1 - Adicionar Camisa.");
 			System.out.println("2 - Adicionar Calca.");
@@ -39,7 +39,7 @@ public class CaixaInteligente {
 			op = leia.nextInt();
 			switch (op) {
 			case 1:
-				System.out.println("Adciionar camisa");
+				System.out.println("Adicionar camisa");
 				Camisa cam = new Camisa();
 				lerDadosComuns();
 
@@ -48,10 +48,10 @@ public class CaixaInteligente {
 
 				cam.setMarca(marca);
 				cam.setModelo(modelo);
-				cam.setPreco(preco);
+				cam.setValor(preco);
 				cam.setTpGola(tpGola);
 				// adicionar no carrinho
-				car.adicionarCamisa(cam);
+				car.adicionarVestuario(cam);
 
 				break;
 			case 2:
@@ -69,7 +69,7 @@ public class CaixaInteligente {
 				cal.setModelo(modelo);
 				cal.setValor(preco);
 				// adicionar no carrinho
-				car.adicionarCalca(cal);
+				car.adicionarVestuario(cal);
 
 				break;
 
@@ -85,18 +85,15 @@ public class CaixaInteligente {
 				}
 				sap.setMarca(marca);
 				sap.setModelo(modelo);
-				sap.setPreco(preco);
+				sap.setValor(preco);
 				// adicionar no carrinho
-				car.adicionarSapato(sap);
+				car.adicionarVestuario(sap);
 
 				break;
 
 			case 7:
-				System.out.println("Fechar pedido camisa");
-				double totalCompra = car.fecharPedidoCamisa();
-				System.out.println("Total da compra:" + totalCompra);
-
-				totalCompra += car.fecharPedidoCalca();
+				System.out.println("Fechar pedido");
+				double totalCompra = car.fecharPedidoVestuario();
 				System.out.println("Total da compra:" + totalCompra);
 
 				break;

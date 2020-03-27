@@ -14,12 +14,12 @@ public class Carrinho {
 		//logica de programacao
 		double tot = 0.0;
 		for (int i = 0; i < controleCamisa; i++) {
-			tot = tot + vetorCamisa[i].getPreco();
+			tot = tot + vetorCamisa[i].getValor();
 		}
 		return tot;
 	}
 
-	private Camisa vetorCalca[] = new Camisa[TOTAL];
+	private Calca vetorCalca[] = new Calca[TOTAL];
 	private int controleCalca = 0;
 	public void adicionarCalca(Calca c) {
 		//logica de programacao
@@ -30,7 +30,7 @@ public class Carrinho {
 		//logica de programacao
 		double tot = 0.0;
 		for (int i = 0; i < controleCalca; i++) {
-			tot = tot + vetorCalca[i].getPreco();
+			tot = tot + vetorCalca[i].getValor();
 		}
 		return tot;
 	}
@@ -46,7 +46,7 @@ public class Carrinho {
 		//logica de programacao
 		double tot = 0.0;
 		for (int i = 0; i < controleSapato; i++) {
-			tot = tot + vetorSapato[i].getPreco();
+			tot = tot + vetorSapato[i].getValor();
 		}
 		return tot;
 	}

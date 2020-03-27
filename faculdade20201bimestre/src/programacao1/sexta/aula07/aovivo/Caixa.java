@@ -37,7 +37,7 @@ public class Caixa {
 				String tpGola = leia.next();
 				cam.setMarca(marca);
 				cam.setModelo(modelo);
-				cam.setPreco(preco);
+				cam.setValor(preco);
 				cam.setTpGola(tpGola);
 				// adicionar no carrinho
 				car.adicionarCamisa(cam);
