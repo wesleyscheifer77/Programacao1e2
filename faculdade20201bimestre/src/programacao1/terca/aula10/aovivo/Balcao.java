@@ -11,7 +11,7 @@ public class Balcao {
 	Scanner leia = new Scanner(System.in);
 
 	private void processar() {
-
+		int op = 0;
 		do {
 			System.out.println("1 - Adcionar Carro:");
 			System.out.println("2 - Adcionar Moto:");
@@ -19,7 +19,7 @@ public class Balcao {
 			System.out.println("4- Adcionar Bicicleta:");
 			System.out.println("8- Fechar contrato:");
 			System.out.println("9- Sairdo sistema:");
-			int op = leia.nextInt();
+			op = leia.nextInt();
 			switch (op) {
 			case 1:
 				System.out.println("Carro");
